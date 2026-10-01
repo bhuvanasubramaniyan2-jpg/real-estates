@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Assistant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="chatbot">
+<header>
+<div class="logo">🏠</div>
+<div><h1>Real Estate Assistant</h1><p>Property help made simple</p></div>
+</header>
+
+<main id="chatBox">
+<div class="message bot"><div class="avatar">🏠</div>
+<div class="bubble">Hi! 👋 I'm your Real Estate Assistant.<br>
+Ask me about buying, renting, selling, apartments, prices, loans, or locations.</div></div>
+</main>
+
+<div class="quick">
+<button onclick="sendQuick('I want to buy a house')">Buy</button>
+<button onclick="sendQuick('I want to rent an apartment')">Rent</button>
+<button onclick="sendQuick('Tell me about property prices')">Prices</button>
+<button onclick="sendQuick('What are common amenities?')">Amenities</button>
+</div>
+
+<form id="chatForm">
+<input id="messageInput" placeholder="Type your message..." autocomplete="off" required>
+<button type="submit">Send</button>
+</form>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
